@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install net-tools
+      apt: name=net-tools state=present update_cache=true
+    - name: Install netcat
+      apt: name=netcat state=present update_cache=true
